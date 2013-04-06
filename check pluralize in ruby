@@ -1,0 +1,13 @@
+Actually all you need to do is
+
+require 'active_support/inflector'
+
+and that will extend the String type.
+
+you can then do
+
+"MyString".pluralize
+
+which will return
+
+"MyStrings"
