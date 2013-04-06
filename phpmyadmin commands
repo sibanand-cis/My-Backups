@@ -1,0 +1,28 @@
+PHPMYADMIN COMMANDS::
+
+sudo /opt/lampp/lampp start
+sudo /etc/init.d/mysql stop
+sudo /etc/init.d/mysql restart 
+
+>for "Another daemon is already running" issue
+Q: i’m trying to start lampp from terminal as it follows:
+root@ecds-09:~# /opt/lampp/lampp start
+the result is:
+Starting XAMPP for Linux 1.7.2…
+XAMPP: Another web server daemon is already running.
+XAMPP: Another MySQL daemon is already running.
+XAMPP: Starting ProFTPD…
+XAMPP for Linux started.
+
+So, Another web server daemon is already running!!what is wrong?
+
+To  solve this problem you only have to:
+
+1) To stop apache2 server. Just type in terminal: sudo /etc/init.d/apache2 stop
+The web server apache2 will be stopped now.
+
+2) To stop MySQL. Just type in terminal: sudo /etc/init.d/mysql stop
+To start lampp, just type again: sudo /opt/lampp/lampp start
+
+Now you can type in your browser : http://localhost/phpmyadmin for example!
+
